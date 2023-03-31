@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [ "title"=>"Home"]);
-});
+Route::get('/', [HomeController::class, 'home']);
 
 Route::get('/about', function () {
     return view('about', [ "title"=>"About"]);
@@ -25,6 +25,4 @@ Route::get('/contact', function () {
     return view('contact', [ "title"=>"Contact"]);
 });
 
-Route::get('/blog', function () {
-    return view('blog', [ "title"=>"Blog"]);
-});
+Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
