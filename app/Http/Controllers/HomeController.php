@@ -13,4 +13,25 @@ class HomeController extends Controller
 
 
     }
+
+    public function blog()
+    {
+
+        return view('blog', [ "title"=>"Blog"]);
+
+    }
+
+    public function about()
+    {
+
+        return view('about', [ "title"=>"About"]);
+
+    }
+
+    public function contact()
+    {
+
+        return view('contact', [ "title"=>"Contact"]);
+
+    }
 }
