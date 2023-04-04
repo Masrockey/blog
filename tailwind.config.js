@@ -63,6 +63,6 @@ module.exports = {
             },
 
     plugins: [
-        require('flowbite/plugin', '@tailwindcss/aspect-ratio', '@tailwindcss/forms', 'font-awesome')
+        require('flowbite/plugin', '@tailwindcss/aspect-ratio', '@tailwindcss/forms', 'font-awesome', 'flowbite-typography')
     ],
 }
